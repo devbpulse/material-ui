@@ -8,11 +8,11 @@
     "build": "cross-env NODE_ENV=production next build --profile",
     "build:clean": "rimraf .next && yarn build",
     "build-sw": "node ./scripts/buildServiceWorker.js",
-    "dev": "rimraf ./node_modules/.cache/babel-loader && next dev",
+    "dev": "node api.js && rimraf ./node_modules/.cache/babel-loader && next dev",
     "deploy": "git push material-ui-docs next:next",
     "export": "rimraf docs/export && next export --threads=3 -o export && yarn build-sw",
     "icons": "rimraf public/static/icons/* && node ./scripts/buildIcons.js",
-    "start": "next start",
+    "start": "node api.js && next start",
     "typescript": "tsc -p tsconfig.json && tsc -p scripts/tsconfig.json",
     "typescript:transpile": "echo 'Use `yarn docs:typescript:formatted'` instead && exit 1",
     "typescript:transpile:dev": "echo 'Use `yarn docs:typescript'` instead && exit 1"
