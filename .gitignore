@@ -2,7 +2,6 @@
 # However, in order to prevent issues, they are ignored here.
 .DS_STORE
 .idea
-.vscode
 *.log
 /.eslintcache
 /.nyc_output
@@ -20,3 +19,7 @@ build
 node_modules
 package-lock.json
 size-snapshot.json
+config.bat
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
