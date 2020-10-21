@@ -25,8 +25,8 @@
   },
   "homepage": "https://github.com/mui-org/material-ui/tree/next/packages/material-ui-types",
   "scripts": {
-    "build": "mkdir build && cp index.d.ts build/ && yarn build:copy-files",
-    "build:copy-files": "node ../../scripts/copy-files.js",
+    "build": "node init && mkdir build && cp index.d.ts build/ && yarn build:copy-files",
+    "build:copy-files": "node init && node ../../scripts/copy-files.js",
     "prebuild": "rimraf build",
     "release": "yarn build && npm publish build --tag next",
     "test": "echo 'No runtime test. Type tests are run with the `typescript` script.'",
