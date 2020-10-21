@@ -15,9 +15,9 @@
     "react-dom": "latest"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "node api.js && next",
     "build": "next build",
-    "start": "next start",
+    "start": "node api.js && next start",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   }
 }
